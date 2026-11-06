@@ -19,22 +19,25 @@ public class App {
             System.out.print("연산자(+, -, *, /) 입력: ");
             char oper = sc.next().charAt(0);
 
-            double result = calcu.calculator(nb1, nb2, oper);
-            if (oper == '/' && nb2 == 0) {
+
+            if (nb2 == 0 && oper == '/') {
                 System.out.println("ERROR: 0으로는 나눌 수 없습니다");
-                arr.remove(Double.POSITIVE_INFINITY);
             } else{
+                double result = calcu.calculator(nb1, nb2, oper);
                 System.out.println("------\n값 = " + result + "\n------");
             }
 
             System.out.print("이전 연산 값을 불러오시겠습니까? (Y/N): ");
             char a = sc.next().charAt(0);
 
-            if (a ==  'Y')   {
-            System.out.println(arr);
-            System.out.print("초기 값을 삭제하시겠습니까? (Y/N): ");
-            char b = sc.next().charAt(0);
-            calcu.remove(b);
+            if (a ==  'Y') {
+                System.out.println(arr);
+                System.out.print("초기 값을 삭제하시겠습니까? (Y/N): ");
+                char b = sc.next().charAt(0);
+
+                if (b == 'Y') {
+                    calcu.remove();
+                }
             }
 
             System.out.print("======\n계산기를 종료하시겠습니까? (Y/N): ");

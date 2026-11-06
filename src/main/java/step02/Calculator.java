@@ -27,11 +27,8 @@ public class Calculator {
         return result;
     }
 
-    public void remove (char r) {
-        if (r == 'Y') {
+    public void remove () {
             arr.remove(0);
-            System.out.println(getArr());
-        }
     }
 
      ArrayList<Double> getArr () {
