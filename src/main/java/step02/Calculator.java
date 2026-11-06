@@ -41,6 +41,4 @@ public class Calculator {
     void setArr(ArrayList<Double> arr){
         this.arr = arr;
     }
-
-
 }

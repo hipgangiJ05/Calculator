@@ -34,7 +34,6 @@ public class App {
             System.out.println(arr);
             System.out.print("초기 값을 삭제하시겠습니까? (Y/N): ");
             char b = sc.next().charAt(0);
-
             calcu.remove(b);
             }
 
