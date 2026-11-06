@@ -35,10 +35,7 @@ public class App {
             System.out.print("초기 값을 삭제하시겠습니까? (Y/N): ");
             char b = sc.next().charAt(0);
 
-                if (b == 'Y') {
-                    arr.remove(0);
-                    System.out.println(arr);
-                }
+            calcu.remove(b);
             }
 
             System.out.print("======\n계산기를 종료하시겠습니까? (Y/N): ");

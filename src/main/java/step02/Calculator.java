@@ -6,6 +6,7 @@ public class Calculator {
 
     ArrayList<Double> arr = new ArrayList<>();
 
+
     public double calculator (double a, double b, char c) {
         double result = 0;
         switch (c) {
@@ -26,6 +27,13 @@ public class Calculator {
         return result;
     }
 
+    public void remove (char r) {
+        if (r == 'Y') {
+            arr.remove(0);
+            System.out.println(getArr());
+        }
+    }
+
      ArrayList<Double> getArr () {
       return this.arr;
     }
@@ -33,4 +41,6 @@ public class Calculator {
     void setArr(ArrayList<Double> arr){
         this.arr = arr;
     }
+
+
 }
