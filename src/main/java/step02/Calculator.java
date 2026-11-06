@@ -1,27 +1,36 @@
 package step02;
 
-public class App {
-    void sum(int nb1, int nb2) {
-        int val1 = nb1 + nb2;
-        System.out.println("값 = " + val1);
-    }
+import java.util.ArrayList;
 
-    void sub(int nb1, int nb2) {
-        int val2 = nb1 - nb2;
-        System.out.println("값 = " + val2);
-    }
+public class Calculator {
 
-    void mul(int nb1, int nb2) {
-        double val3 = (double)nb1 * nb2;
-        System.out.println("값 = " + val3);
-    }
+    ArrayList<Double> arr = new ArrayList<>();
 
-    void div(int nb1, int nb2) {
-        if (nb2 == 0) {
-            System.out.println("0으로 나눌 수 없습니다.");
-        } else {
-            double val4 = (double)nb1 / nb2;
-            System.out.println("값 = " + val4);
+    public double calculator (double a, double b, char c) {
+        double result = 0;
+        switch (c) {
+            case '+' :
+                result = a + b;
+                break;
+            case '-' :
+                result = a - b;
+                break;
+            case '*' :
+                result = a * b;
+                break;
+            case '/' :
+                    result = a / b;
+                break;
         }
+        arr.add(result);
+        return result;
+    }
+
+     ArrayList<Double> getArr () {
+      return this.arr;
+    }
+
+    void setArr(ArrayList<Double> arr){
+        this.arr = arr;
     }
 }
