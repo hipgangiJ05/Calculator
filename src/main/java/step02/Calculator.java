@@ -3,11 +3,8 @@ package step02;
 import java.util.ArrayList;
 
 public class Calculator {
-
     ArrayList<Double> arr = new ArrayList<>();
-
-
-    public double calculator (double a, double b, char c) {
+    public double calculator (int a, int b, char c) {
         double result = 0;
         switch (c) {
             case '+' :
@@ -20,7 +17,7 @@ public class Calculator {
                 result = a * b;
                 break;
             case '/' :
-                    result = a / b;
+                result = (double) a / b;
                 break;
         }
         arr.add(result);
@@ -28,11 +25,11 @@ public class Calculator {
     }
 
     public void remove () {
-            arr.remove(0);
+        arr.remove(0);
     }
 
-     ArrayList<Double> getArr () {
-      return this.arr;
+    ArrayList<Double> getArr () {
+        return this.arr;
     }
 
     void setArr(ArrayList<Double> arr){

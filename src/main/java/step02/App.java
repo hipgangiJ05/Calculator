@@ -11,10 +11,10 @@ public class App {
 
         while (true) {
             System.out.print("첫 번째 숫자 입력: ");
-            double nb1 = sc.nextDouble();
+            int nb1 = sc.nextInt();
 
             System.out.print("두 번째 숫자 입력: ");
-            double nb2 = sc.nextDouble();
+            int nb2 = sc.nextInt();
 
             System.out.print("연산자(+, -, *, /) 입력: ");
             char oper = sc.next().charAt(0);
